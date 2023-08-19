@@ -2,15 +2,27 @@
 {
     public static void Main(string[] args)
     {
-        bool boolVariable = true;
-        int intVariable = 10;
-        float floatVariable = 10.4f;
-        char charVariable = 'a';
+        // 1. 변수
+        bool boolvariable = true;
+        int intvariable = 10;
+        float floatvariable = 10.4f;
+        char charvariable = 'a';
 
-        Console.WriteLine(boolVariable);
-        Console.WriteLine(intVariable);
-        Console.WriteLine(floatVariable);
-        Console.WriteLine(charVariable);
+        Console.WriteLine(boolvariable);
+        Console.WriteLine(intvariable);
+        Console.WriteLine(floatvariable);
+        Console.WriteLine(charvariable);
+
+        // 2. 조건문
+        int num = 10;
+
+        if (num == 0) {
+            Console.WriteLine("num이 0입니다.");
+        } else if (num == 9) {
+            Console.WriteLine("num이 9입니다.");
+        } else {
+            Console.WriteLine("num이 둘다 속하지 않습니다.");
+        }
 
     }
 }
