@@ -174,35 +174,88 @@
 //    }
 //}
 // 클래스를 상속으로 재사용하기 - 오버라이딩(Overriding) : 재정의한다.
-class Robot
+//class Robot
+//{
+//    public void Move()
+//    {
+//        Console.WriteLine("로봇이 움직입니다.");
+//    }
+//}
+//// : Robot 이라고 적으면 Robot으로 부터 상속을 받는다.
+//class CleanRobot : Robot
+//{
+//    public void Move()
+//    {
+//        Console.WriteLine("청소 로봇이 움직입니다.");
+//    }
+//}
+//class RescueRobot : Robot
+//{
+//    public void Move()
+//    {
+//        Console.WriteLine("구조 로봇이 움직입니다.");
+//    }
+//}
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        CleanRobot cr = new CleanRobot();
+//        RescueRobot rr = new RescueRobot();
+//        cr.Move();
+//        rr.Move();
+//    }
+//}
+// 클래스의 데이터 전달 - 멤버 변수
+//class Cat
+//{
+//    public string Name;
+
+//    public Cat (string name)
+//    {
+//        Name = name;
+//        Console.WriteLine("고양이의 이름은 " + Name + "입니다.");
+//    }
+//}
+
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        Cat myCat = new Cat("코코");
+//        myCat.Name = "몰리";
+//        Console.WriteLine("고양이의 이름은 " + myCat.Name + "입니다.");
+//    }
+//}
+
+// 클래스의 데이터 전달 - private, this 키워드
+class Cat
 {
-    public void Move()
+    private string name;
+
+    public Cat(string name)
     {
-        Console.WriteLine("로봇이 움직입니다.");
+       this.name = name;
+        Console.WriteLine("고양이의 이름은 " + name + "입니다.");
+    }
+
+    public void SetName (string name)
+    {
+        this.name = name;
+    }
+
+    public string GetName ()
+    {
+        return this.name;
     }
 }
-// : Robot 이라고 적으면 Robot으로 부터 상속을 받는다.
-class CleanRobot : Robot
-{
-    public void Move()
-    {
-        Console.WriteLine("청소 로봇이 움직입니다.");
-    }
-}
-class RescueRobot : Robot
-{
-    public void Move()
-    {
-        Console.WriteLine("구조 로봇이 움직입니다.");
-    }
-}
+
 class Program
 {
     public static void Main(string[] args)
     {
-        CleanRobot cr = new CleanRobot();
-        RescueRobot rr = new RescueRobot();
-        cr.Move();
-        rr.Move();
+        Cat myCat = new Cat("코코");
+        myCat.SetName("몰리");
+        Console.WriteLine("고양이의 이름은 " + myCat.GetName() + "입니다.");
     }
 }
