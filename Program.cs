@@ -1,7 +1,7 @@
-﻿class Program
-{
-    public static void Main(string[] args)
-    {
+﻿//class Program
+//{
+//    public static void Main(string[] args)
+//    {
         // 1. 데이터를 저장하는 상자 변수
         //bool boolvariable = true;
         //int intvariable = 10;
@@ -51,6 +51,23 @@
         //// sbyte value3 = value1 + value2; 로 하면 오버플로우 현상 때문에 에러가 발생한다. so,
         //int value3 = value1 + value2;
         //Console.WriteLine(value3);
-    }
+//}
+    // 섹션 3 - 1 클래스와 인스턴스
+    class Person
+    {
+        public string Name = null;
 
-}
+        public void Eat()
+        {
+            Console.WriteLine(Name + "(이)가 식사를 합니다.");
+        }
+    }
+    class PersonProgram
+    {
+        public static void Main(string[] args)
+        {
+            Person p1 = new Person();
+            p1.Name = "서준";
+            p1.Eat();
+        }
+    }
